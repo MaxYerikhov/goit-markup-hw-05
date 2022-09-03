@@ -414,7 +414,7 @@ footer {
   margin-bottom: 4px;
 }
 
-.portfolio-list p {
+.portfolio-list-name {
   font-size: 16px;
   line-height: 1.87;
   color: var(--secondary-text-color);
@@ -531,6 +531,7 @@ footer {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--secondary-text-color);
+  transition: background-color var(--transition-dur-and-func);
 }
 .footer-icons-link:hover,
 .footer-icons-link:focus {
@@ -648,4 +649,62 @@ footer {
 
 .work-list-img-wrapper {
   position: relative;
+}
+
+.portfolio-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-background-color);
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform var(--transition-dur-and-func);
+}
+
+.portfolio-cards:hover .overlay,
+.portfolio-cards:focus .overlay {
+  transform: translateY(0);
+}
+
+.active {
+  position: relative;
+}
+
+.link-before::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(32px);
+
+  width: 78px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
+.link-before-main:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(32px);
+
+  width: 48px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
