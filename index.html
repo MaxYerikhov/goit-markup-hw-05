@@ -55,7 +55,7 @@
       <section class="head-block">
         <div class="container head-bg">
           <h1 class="head-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="head-button" type="button">
+          <button class="head-button" type="button" data-modal-open>
             <span class="button-title">Замовити послугу</span>
           </button>
         </div>
@@ -110,13 +110,22 @@
           <h2 class="work-title">Чим ми займаємося</h2>
           <ul class="work-photo">
             <li>
-              <img src="./images/work.jpg" alt="work-process" width="370" />
+              <div class="work-list-img-wrapper">
+                <img src="./images/work.jpg" alt="work-process" width="370" />
+                <p class="work-list-overlay">Десктопні додатки</p>
+              </div>
             </li>
             <li>
-              <img src="./images/work1.jpg" alt="work-process" width="370" />
+              <div class="work-list-img-wrapper">
+                <img src="./images/work1.jpg" alt="work-process" width="370" />
+                <p class="work-list-overlay">Мобільні додатки</p>
+              </div>
             </li>
             <li>
-              <img src="./images/work2.jpg" alt="work-process" width="370" />
+              <div class="work-list-img-wrapper">
+                <img src="./images/work2.jpg" alt="work-process" width="370" />
+                <p class="work-list-overlay">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -331,11 +340,11 @@
 
     <footer class="footer">
       <div class="container">
-         <div class="address-data">
-        <a class="logo link footer-logo-link" href="./index.html"
-          >Web<span class="logo-footer">Studio</span></a
-        >
-        <address>
+        <div class="address-data">
+          <a class="logo link footer-logo-link" href="./index.html"
+            >Web<span class="logo-footer">Studio</span></a
+          >
+          <address>
             <ul class="footer-contacts">
               <li>
                 <a
@@ -353,8 +362,8 @@
                 <a class="contacts" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
-          </div>
-        </address>
+          </address>
+        </div>
 
         <div class="footer-links">
           <p class="footer-icons-title">приєднуйтесь</p>
@@ -391,5 +400,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close type="button">
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
