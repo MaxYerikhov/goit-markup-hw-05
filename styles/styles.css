@@ -56,7 +56,7 @@ address {
 
 .page-header {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 }
 
 /* header */
@@ -99,6 +99,7 @@ a {
 }
 
 .nav-link {
+  padding: 32px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -115,6 +116,7 @@ a {
 
 .current {
   color: var(--accent-color);
+  position: relative;
 }
 
 .contacts-page {
@@ -334,6 +336,7 @@ footer {
 }
 
 .current-portfolio {
+  position: relative;
   color: var(--accent-color);
 }
 
@@ -634,17 +637,17 @@ footer {
 }
 
 .work-list-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
-  left: 0;
+  height: 70px;
   bottom: 0;
-  padding: 27px;
   background: rgba(47, 48, 58, 0.8);
-  text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--primary-background-color);
-  overflow: auto;
 }
 
 .work-list-img-wrapper {
@@ -679,18 +682,12 @@ footer {
   transform: translateY(0);
 }
 
-.active {
-  position: relative;
-}
-
 .link-before::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(32px);
-
-  width: 78px;
+  width: 100%;
   height: 4px;
   background: #2196f3;
   border-radius: 2px;
@@ -701,9 +698,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(32px);
-
-  width: 48px;
+  width: 100%;
   height: 4px;
   background: #2196f3;
   border-radius: 2px;
